@@ -1,7 +1,6 @@
 FROM python:3.12-slim
 WORKDIR /app
-COPY requirements.txt .
+COPY . . 
 RUN pip install -r requirements.txt
-COPY app.py .
-EXPOSE 5000
+EXPOSE 3000
 ENTRYPOINT ["python", "app.py"]
