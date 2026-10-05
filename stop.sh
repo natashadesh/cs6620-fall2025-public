@@ -19,7 +19,7 @@ for PID in $PIDS; do
     sudo kill $PID
 done
 
-# Wait a moment and check if they're really stopped
+# Wait for a moment and check if they're really stopped
 sleep 2
 
 if pgrep -f "gunicorn.*app:app" > /dev/null; then
